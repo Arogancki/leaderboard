@@ -1,0 +1,56 @@
+{
+    "name": "leaderboard",
+    "version": "0.1.0",
+    "main": "src/main.ts",
+    "scripts": {
+        "testData": "ts-node scripts/populateTestData.ts",
+        "dev": "nodemon -w src/",
+        "debug": "nodemon -w src/ --inspect=0.0.0.0:9240 src/main.ts",
+        "build:dist": "tsc",
+        "prod": "node dist/src/main.js",
+        "clean:dist": "rm -rf ./dist",
+        "build:docker": "docker build -t leaderboard .",
+        "docker": "docker run -it -p 8080:8080 leaderboard",
+        "test": "jest --config config/jest.config.json"
+    },
+    "author": "Artur Ziemba <ziembaart@gmail.com>",
+    "license": "MIT",
+    "private": false,
+    "engines": {
+        "node": ">= 10.0"
+    },
+    "devDependencies": {
+        "@types/boom": "^7.2.0",
+        "@types/express": "^4.16.0",
+        "@types/jest": "^23.0.2",
+        "jest": "^23.1.0",
+        "nodemon": "^1.17.5",
+        "ts-jest": "^22.4.6",
+        "ts-node": "^6.1.1",
+        "tslint": "^5.10.0",
+        "tslint-config-airbnb": "^5.9.2",
+        "typescript": "^3.8.3"
+    },
+    "dependencies": {
+        "@types/cors": "^2.8.6",
+        "@types/express-pino-logger": "^4.0.2",
+        "@types/glob": "^7.1.1",
+        "@types/helmet": "0.0.45",
+        "@types/mongoose": "^5.5.41",
+        "@types/node": "^13.11.1",
+        "@types/pino": "^6.0.0",
+        "awilix": "^3.0.8",
+        "boom": "^7.2.0",
+        "core-decorators": "^0.20.0",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.16.3",
+        "express-pino-logger": "^4.0.0",
+        "helmet": "^3.21.2",
+        "joiful": "^2.0.0",
+        "mongoose": "^5.9.9",
+        "path": "^0.12.7",
+        "pino": "^6.2.0",
+        "unique-names-generator": "^4.2.0"
+    }
+}
