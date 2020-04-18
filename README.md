@@ -56,6 +56,9 @@ route: "/api/1v/score",
 body: {
     player: "string", // player id
     points: "number" // score
+},
+response: {
+    success: true
 }
 ```
 
@@ -69,7 +72,14 @@ route: "/api/1v/score",
 query: {
     page: "number",
     pageSize: "number"
-}
+},
+response: [{
+        score: "number",
+        player: {
+            nick: "string",
+            rank: "string"
+        }
+    }]
 ```
 
 ## todo:
