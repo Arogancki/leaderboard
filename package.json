@@ -48,7 +48,7 @@
         "express-pino-logger": "^4.0.0",
         "helmet": "^3.21.2",
         "joiful": "^2.0.0",
-        "mongoose": "^5.9.9",
+        "mongoose": "^6.13.9",
         "path": "^0.12.7",
         "pino": "^6.2.0",
         "unique-names-generator": "^4.2.0"
